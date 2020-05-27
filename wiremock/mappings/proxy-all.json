@@ -1,0 +1,9 @@
+{
+    "request": {
+        "method": "ANY"
+    },
+    "response": {
+        "status": 200,
+        "proxyBaseUrl": "http://haproxy:3128"
+    }
+}
