@@ -1,0 +1,440 @@
+$ ./test.sh
+*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* Connected to localhost (127.0.0.1) port 9000 (#0)
+> GET /todos/1 HTTP/1.1
+> Host: jsonplaceholder.typicode.com
+> User-Agent: curl/7.54.0
+> Accept: */*
+>
+< HTTP/1.1 200 OK
+< Date: Thu, 04 Jun 2020 14:33:45 GMT
+< Content-Type: application/json;charset=utf-8
+< Set-Cookie: __cfduid=debcc689c1b591246763ae0744634a78e1591281225; expires=Sat, 04-Jul-20 14:33:45 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax
+< X-Powered-By: Express
+< Vary: Origin, Accept-Encoding
+< Cache-Control: max-age=43200
+< Pragma: no-cache
+< Expires: -1
+< x-content-type-options: nosniff
+< ETag: W/"53-hfEnumeNh6YirfjyjaujcOPPT+s"
+< Via: 1.1 vegur
+< cf-cache-status: HIT
+< Age: 8164
+< Accept-Ranges: bytes
+< cf-request-id: 032159a8450000f24a01263200000001
+< expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< Server: cloudflare
+< cf-ray: 59e25eed3df3f24a-ORD
+< Vary: User-Agent
+< Transfer-Encoding: chunked
+<
+{
+  "userId": 1,
+  "id": 1,
+  "title": "delectus aut autem",
+  "completed": false
+* Connection #0 to host localhost left intact
+}*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* Connected to localhost (127.0.0.1) port 9000 (#0)
+> GET /v1/public/coin/1 HTTP/1.1
+> Host: api.coinranking.com
+> User-Agent: curl/7.54.0
+> Accept: */*
+>
+< HTTP/1.1 500 Server Error
+< Cache-Control: must-revalidate,no-cache,no-store
+< Content-Type: text/html;charset=iso-8859-1
+< Content-Length: 10188
+< Connection: close
+< Server: Jetty(9.4.20.v20190813)
+<
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 500 Server Error</title>
+</head>
+<body><h2>HTTP ERROR 500</h2>
+<p>Problem accessing /v1/public/coin/1. Reason:
+<pre>    Server Error</pre></p><h3>Caused by:</h3><pre>java.lang.RuntimeException: wiremock.org.apache.http.NoHttpResponseException: The target server failed to respond
+	at com.github.tomakehurst.wiremock.http.ProxyResponseRenderer.render(ProxyResponseRenderer.java:94)
+	at com.github.tomakehurst.wiremock.http.StubResponseRenderer.buildResponse(StubResponseRenderer.java:62)
+	at com.github.tomakehurst.wiremock.http.StubResponseRenderer.render(StubResponseRenderer.java:56)
+	at com.github.tomakehurst.wiremock.http.AbstractRequestHandler.handle(AbstractRequestHandler.java:72)
+	at com.github.tomakehurst.wiremock.servlet.WireMockHandlerDispatchingServlet.service(WireMockHandlerDispatchingServlet.java:120)
+	at wiremock.javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at wiremock.org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:852)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at wiremock.org.eclipse.jetty.servlets.CrossOriginFilter.handle(CrossOriginFilter.java:310)
+	at wiremock.org.eclipse.jetty.servlets.CrossOriginFilter.doFilter(CrossOriginFilter.java:264)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1591)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:542)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at wiremock.org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1307)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:482)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at wiremock.org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1204)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at wiremock.org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:772)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at wiremock.org.eclipse.jetty.server.Server.handle(Server.java:494)
+	at wiremock.org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:374)
+	at wiremock.org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:268)
+	at wiremock.org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at wiremock.org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at wiremock.org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at wiremock.org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:367)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:782)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:918)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: wiremock.org.apache.http.NoHttpResponseException: The target server failed to respond
+	at wiremock.org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141)
+	at wiremock.org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at wiremock.org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at wiremock.org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at wiremock.org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:165)
+	at wiremock.org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at wiremock.org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at wiremock.org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at wiremock.org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at wiremock.org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at wiremock.org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at wiremock.org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:108)
+	at wiremock.org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.github.tomakehurst.wiremock.http.ProxyResponseRenderer.render(ProxyResponseRenderer.java:78)
+	... 35 more
+</pre>
+<h3>Caused by:</h3><pre>wiremock.org.apache.http.NoHttpResponseException: The target server failed to respond
+	at wiremock.org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141)
+	at wiremock.org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at wiremock.org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at wiremock.org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at wiremock.org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:165)
+	at wiremock.org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at wiremock.org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at wiremock.org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at wiremock.org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at wiremock.org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at wiremock.org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at wiremock.org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:108)
+	at wiremock.org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.github.tomakehurst.wiremock.http.ProxyResponseRenderer.render(ProxyResponseRenderer.java:78)
+	at com.github.tomakehurst.wiremock.http.StubResponseRenderer.buildResponse(StubResponseRenderer.java:62)
+	at com.github.tomakehurst.wiremock.http.StubResponseRenderer.render(StubResponseRenderer.java:56)
+	at com.github.tomakehurst.wiremock.http.AbstractRequestHandler.handle(AbstractRequestHandler.java:72)
+	at com.github.tomakehurst.wiremock.servlet.WireMockHandlerDispatchingServlet.service(WireMockHandlerDispatchingServlet.java:120)
+	at wiremock.javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at wiremock.org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:852)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at wiremock.org.eclipse.jetty.servlets.CrossOriginFilter.handle(CrossOriginFilter.java:310)
+	at wiremock.org.eclipse.jetty.servlets.CrossOriginFilter.doFilter(CrossOriginFilter.java:264)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1591)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:542)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at wiremock.org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1307)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:482)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at wiremock.org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1204)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at wiremock.org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:772)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at wiremock.org.eclipse.jetty.server.Server.handle(Server.java:494)
+	at wiremock.org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:374)
+	at wiremock.org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:268)
+	at wiremock.org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at wiremock.org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at wiremock.org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at wiremock.org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:367)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:782)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:918)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre>
+<hr><a href="http://eclipse.org/jetty">Powered by Jetty:// 9.4.20.v20190813</a><hr/>
+
+</body>
+</html>
+* Closing connection 0
+*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* Connected to localhost (127.0.0.1) port 9000 (#0)
+> GET /v1/public/coin/1 HTTP/1.1
+> Host: api.coinranking.com
+> User-Agent: curl/7.54.0
+> Accept: */*
+>
+< HTTP/1.1 200 OK
+< Content-Type: application/json;charset=utf-8
+< Cache-Control: max-age=60
+< Date: Thu, 04 Jun 2020 14:33:48 GMT
+< ETag: W/"d3c-1PKl2yjbuFFcu9WpJWyJ59sZJjs"
+< x-rate-score: 4.159ms
+< Vary: Accept-Encoding
+< x-cache: Miss from cloudfront
+< Via: 1.1 9544538048b67636eed3ec04c11d909b.cloudfront.net (CloudFront)
+< x-amz-cf-pop: ORD51-C1
+< x-amz-cf-id: e4Q4MQs_4XWmYWjurpB8ZiNqzVsgh3NF-cMTjLZbK5CE1R7s7TR9EA==
+< Vary: User-Agent
+< Transfer-Encoding: chunked
+< Server: Jetty(9.4.20.v20190813)
+<
+* Connection #0 to host localhost left intact
+{"status":"success","data":{"base":{"symbol":"USD","sign":"$"},"coin":{"id":1,"uuid":"Qwsogvtv82FCd","slug":"bitcoin-btc","symbol":"BTC","name":"Bitcoin","description":"<p>Bitcoin (BTC) is the first decentralized digital currency that can be sent through the internet globally, without using an intermediary; such as financial institutions, like a (central) bank or agency. The Bitcoin transactions are controlled by many of its users, instead of a few entities. The processing of these transactions is called ‘mining’; new Bitcoin transactions, known as blocks, are added to the record of past transactions on the blockchain. In return, they get awarded with Bitcoin.</p>\n<h3>The goal of Bitcoin</h3>\n<p>Bitcoin was invented as a new electronic cash system that’s fully peer-to-peer, with no third party as an intermediary. Bitcoin was created because of a few main concerns of the inventor, like manipulation of the money supply, with inflation as result; profitable monopolies and oligopolies in financial services, such as the high fees for international money transfers; and tracking the money used by people.</p>\n<h3>Who started Bitcoin</h3>\n<p>In 2008, Bitcoin was invented by an anonymous person or group named Satoshi Nakamoto. In 2009, Bitcoin was released as open-source software. Nakamoto’s real identity is still unknown, although there are many theories about who it might be. Decentralization is one of Bitcoin’s most important principles, and that’s why this anonymity is perfectly in line.</p>\n<h3>Bitcoin’s technical part</h3>\n<p>The Bitcoin blockchain is a database, the so-called ‘ledger’, that consists of Bitcoin transaction records. For new transactions to be added to the ledger, the nodes must agree that the transaction is real and valid. The blockchain is public and contains records of all the transactions taking place.</p>","color":"#f7931A","iconType":"vector","iconUrl":"https://cdn.coinranking.com/bOabBYkcX/bitcoin_btc.svg","websiteUrl":"https://bitcoin.org","socials":[{"name":"r/bitcoin","url":"https://www.reddit.com/r/bitcoin/","type":"reddit"},{"name":"bitcoin/bitcoin","url":"https://github.com/bitcoin/bitcoin","type":"github"}],"links":[{"name":"bitcoin.org","type":"website","url":"https://bitcoin.org"},{"name":"r/bitcoin","url":"https://www.reddit.com/r/bitcoin/","type":"reddit"},{"name":"bitcoin/bitcoin","url":"https://github.com/bitcoin/bitcoin","type":"github"},{"name":"blockchain.com","url":"https://www.blockchain.com/explorer","type":"explorer"}],"confirmedSupply":true,"numberOfMarkets":18188,"numberOfExchanges":296,"type":"coin","volume":21224629719,"marketCap":181317499538,"price":"9857.4364917498","circulatingSupply":18393981,"totalSupply":18393981,"approvedSupply":true,"firstSeen":1330214400000,"change":1.65,"rank":1,"history":["9697.7429127053","9714.155180768","9693.4375894632","9703.3687800402","9696.6044906193","9722.2285873104","9712.1334313088","9705.8070830843","9710.8759010509","9714.4401661533","9752.8918581359","9758.2428556867","9773.0193957605","9786.592645008","9794.9991913174","9781.241232121","9764.2775966039","9801.2257190975","9834.1908947013","9805.2645162606","9777.9429774195","9717.7259959507","9716.4397258762","9788.1359027564","9793.8898962136","9859.5550797083","9857.4364917498"],"allTimeHigh":{"price":"19500.47124838819","timestamp":1513555200000},"penalty":false}}}*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* Connected to localhost (127.0.0.1) port 9000 (#0)
+> GET /v1/public/coin/1 HTTP/1.1
+> Host: api.coinranking.com
+> User-Agent: curl/7.54.0
+> Accept: */*
+>
+< HTTP/1.1 200 OK
+< Content-Type: application/json;charset=utf-8
+< Cache-Control: max-age=60
+< Date: Thu, 04 Jun 2020 14:33:48 GMT
+< ETag: W/"d3c-1PKl2yjbuFFcu9WpJWyJ59sZJjs"
+< x-rate-score: 4.159ms
+< Vary: Accept-Encoding
+< x-cache: Hit from cloudfront
+< Via: 1.1 9544538048b67636eed3ec04c11d909b.cloudfront.net (CloudFront)
+< x-amz-cf-pop: ORD51-C1
+< x-amz-cf-id: RI80s9h8xvODk-FXr5X2ITZxyYozmiou8m5dxlciX8T3HIW-E9Pw6Q==
+< Age: 1
+< Vary: User-Agent
+< Transfer-Encoding: chunked
+< Server: Jetty(9.4.20.v20190813)
+<
+* Connection #0 to host localhost left intact
+{"status":"success","data":{"base":{"symbol":"USD","sign":"$"},"coin":{"id":1,"uuid":"Qwsogvtv82FCd","slug":"bitcoin-btc","symbol":"BTC","name":"Bitcoin","description":"<p>Bitcoin (BTC) is the first decentralized digital currency that can be sent through the internet globally, without using an intermediary; such as financial institutions, like a (central) bank or agency. The Bitcoin transactions are controlled by many of its users, instead of a few entities. The processing of these transactions is called ‘mining’; new Bitcoin transactions, known as blocks, are added to the record of past transactions on the blockchain. In return, they get awarded with Bitcoin.</p>\n<h3>The goal of Bitcoin</h3>\n<p>Bitcoin was invented as a new electronic cash system that’s fully peer-to-peer, with no third party as an intermediary. Bitcoin was created because of a few main concerns of the inventor, like manipulation of the money supply, with inflation as result; profitable monopolies and oligopolies in financial services, such as the high fees for international money transfers; and tracking the money used by people.</p>\n<h3>Who started Bitcoin</h3>\n<p>In 2008, Bitcoin was invented by an anonymous person or group named Satoshi Nakamoto. In 2009, Bitcoin was released as open-source software. Nakamoto’s real identity is still unknown, although there are many theories about who it might be. Decentralization is one of Bitcoin’s most important principles, and that’s why this anonymity is perfectly in line.</p>\n<h3>Bitcoin’s technical part</h3>\n<p>The Bitcoin blockchain is a database, the so-called ‘ledger’, that consists of Bitcoin transaction records. For new transactions to be added to the ledger, the nodes must agree that the transaction is real and valid. The blockchain is public and contains records of all the transactions taking place.</p>","color":"#f7931A","iconType":"vector","iconUrl":"https://cdn.coinranking.com/bOabBYkcX/bitcoin_btc.svg","websiteUrl":"https://bitcoin.org","socials":[{"name":"r/bitcoin","url":"https://www.reddit.com/r/bitcoin/","type":"reddit"},{"name":"bitcoin/bitcoin","url":"https://github.com/bitcoin/bitcoin","type":"github"}],"links":[{"name":"bitcoin.org","type":"website","url":"https://bitcoin.org"},{"name":"r/bitcoin","url":"https://www.reddit.com/r/bitcoin/","type":"reddit"},{"name":"bitcoin/bitcoin","url":"https://github.com/bitcoin/bitcoin","type":"github"},{"name":"blockchain.com","url":"https://www.blockchain.com/explorer","type":"explorer"}],"confirmedSupply":true,"numberOfMarkets":18188,"numberOfExchanges":296,"type":"coin","volume":21224629719,"marketCap":181317499538,"price":"9857.4364917498","circulatingSupply":18393981,"totalSupply":18393981,"approvedSupply":true,"firstSeen":1330214400000,"change":1.65,"rank":1,"history":["9697.7429127053","9714.155180768","9693.4375894632","9703.3687800402","9696.6044906193","9722.2285873104","9712.1334313088","9705.8070830843","9710.8759010509","9714.4401661533","9752.8918581359","9758.2428556867","9773.0193957605","9786.592645008","9794.9991913174","9781.241232121","9764.2775966039","9801.2257190975","9834.1908947013","9805.2645162606","9777.9429774195","9717.7259959507","9716.4397258762","9788.1359027564","9793.8898962136","9859.5550797083","9857.4364917498"],"allTimeHigh":{"price":"19500.47124838819","timestamp":1513555200000},"penalty":false}}}*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* Connected to localhost (127.0.0.1) port 9000 (#0)
+> GET /todos/1 HTTP/1.1
+> Host: jsonplaceholder.typicode.com
+> User-Agent: curl/7.54.0
+> Accept: */*
+>
+< HTTP/1.1 504 Gateway Timeout
+< Cache-Control: no-cache
+< Content-Type: text/html
+< Transfer-Encoding: chunked
+< Server: Jetty(9.4.20.v20190813)
+<
+<html><body><h1>504 Gateway Time-out</h1>
+The server didn't respond in time.
+</body></html>
+* Connection #0 to host localhost left intact
+*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* Connected to localhost (127.0.0.1) port 9000 (#0)
+> GET /todos/1 HTTP/1.1
+> Host: jsonplaceholder.typicode.com
+> User-Agent: curl/7.54.0
+> Accept: */*
+>
+< HTTP/1.1 200 OK
+< Date: Thu, 04 Jun 2020 14:34:01 GMT
+< Content-Type: application/json;charset=utf-8
+< Set-Cookie: __cfduid=df440c4705dd789346bd4acebe3af8a661591281241; expires=Sat, 04-Jul-20 14:34:01 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax
+< X-Powered-By: Express
+< Vary: Origin, Accept-Encoding
+< Cache-Control: max-age=43200
+< Pragma: no-cache
+< Expires: -1
+< x-content-type-options: nosniff
+< ETag: W/"53-hfEnumeNh6YirfjyjaujcOPPT+s"
+< Via: 1.1 vegur
+< cf-cache-status: HIT
+< Age: 8180
+< Accept-Ranges: bytes
+< cf-request-id: 032159e6db000058a406a3c200000001
+< expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< Server: cloudflare
+< cf-ray: 59e25f515d8958a4-ORD
+< Vary: User-Agent
+< Transfer-Encoding: chunked
+<
+{
+  "userId": 1,
+  "id": 1,
+  "title": "delectus aut autem",
+  "completed": false
+* Connection #0 to host localhost left intact
+}*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* Connected to localhost (127.0.0.1) port 9000 (#0)
+> GET /todos/1 HTTP/1.1
+> Host: jsonplaceholder.typicode.com
+> User-Agent: curl/7.54.0
+> Accept: */*
+>
+< HTTP/1.1 200 OK
+< Date: Thu, 04 Jun 2020 14:34:02 GMT
+< Content-Type: application/json;charset=utf-8
+< Set-Cookie: __cfduid=d095333266608e2d1829e53f892cbb1551591281242; expires=Sat, 04-Jul-20 14:34:02 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax
+< X-Powered-By: Express
+< Vary: Origin, Accept-Encoding
+< Cache-Control: max-age=43200
+< Pragma: no-cache
+< Expires: -1
+< x-content-type-options: nosniff
+< ETag: W/"53-hfEnumeNh6YirfjyjaujcOPPT+s"
+< Via: 1.1 vegur
+< cf-cache-status: HIT
+< Age: 8181
+< Accept-Ranges: bytes
+< cf-request-id: 032159eb21000058a406b26200000001
+< expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< Server: cloudflare
+< cf-ray: 59e25f583d9958a4-ORD
+< Vary: User-Agent
+< Transfer-Encoding: chunked
+<
+{
+  "userId": 1,
+  "id": 1,
+  "title": "delectus aut autem",
+  "completed": false
+* Connection #0 to host localhost left intact
+}*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* Connected to localhost (127.0.0.1) port 9000 (#0)
+> GET /v1/public/coin/1 HTTP/1.1
+> Host: api.coinranking.com
+> User-Agent: curl/7.54.0
+> Accept: */*
+>
+< HTTP/1.1 500 Server Error
+< Cache-Control: must-revalidate,no-cache,no-store
+< Content-Type: text/html;charset=iso-8859-1
+< Content-Length: 10188
+< Connection: close
+< Server: Jetty(9.4.20.v20190813)
+<
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 500 Server Error</title>
+</head>
+<body><h2>HTTP ERROR 500</h2>
+<p>Problem accessing /v1/public/coin/1. Reason:
+<pre>    Server Error</pre></p><h3>Caused by:</h3><pre>java.lang.RuntimeException: wiremock.org.apache.http.NoHttpResponseException: The target server failed to respond
+	at com.github.tomakehurst.wiremock.http.ProxyResponseRenderer.render(ProxyResponseRenderer.java:94)
+	at com.github.tomakehurst.wiremock.http.StubResponseRenderer.buildResponse(StubResponseRenderer.java:62)
+	at com.github.tomakehurst.wiremock.http.StubResponseRenderer.render(StubResponseRenderer.java:56)
+	at com.github.tomakehurst.wiremock.http.AbstractRequestHandler.handle(AbstractRequestHandler.java:72)
+	at com.github.tomakehurst.wiremock.servlet.WireMockHandlerDispatchingServlet.service(WireMockHandlerDispatchingServlet.java:120)
+	at wiremock.javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at wiremock.org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:852)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at wiremock.org.eclipse.jetty.servlets.CrossOriginFilter.handle(CrossOriginFilter.java:310)
+	at wiremock.org.eclipse.jetty.servlets.CrossOriginFilter.doFilter(CrossOriginFilter.java:264)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1591)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:542)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at wiremock.org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1307)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:482)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at wiremock.org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1204)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at wiremock.org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:772)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at wiremock.org.eclipse.jetty.server.Server.handle(Server.java:494)
+	at wiremock.org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:374)
+	at wiremock.org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:268)
+	at wiremock.org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at wiremock.org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at wiremock.org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at wiremock.org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:367)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:782)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:918)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: wiremock.org.apache.http.NoHttpResponseException: The target server failed to respond
+	at wiremock.org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141)
+	at wiremock.org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at wiremock.org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at wiremock.org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at wiremock.org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:165)
+	at wiremock.org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at wiremock.org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at wiremock.org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at wiremock.org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at wiremock.org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at wiremock.org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at wiremock.org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:108)
+	at wiremock.org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.github.tomakehurst.wiremock.http.ProxyResponseRenderer.render(ProxyResponseRenderer.java:78)
+	... 35 more
+</pre>
+<h3>Caused by:</h3><pre>wiremock.org.apache.http.NoHttpResponseException: The target server failed to respond
+	at wiremock.org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141)
+	at wiremock.org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at wiremock.org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at wiremock.org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at wiremock.org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:165)
+	at wiremock.org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at wiremock.org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at wiremock.org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at wiremock.org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at wiremock.org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at wiremock.org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at wiremock.org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:108)
+	at wiremock.org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.github.tomakehurst.wiremock.http.ProxyResponseRenderer.render(ProxyResponseRenderer.java:78)
+	at com.github.tomakehurst.wiremock.http.StubResponseRenderer.buildResponse(StubResponseRenderer.java:62)
+	at com.github.tomakehurst.wiremock.http.StubResponseRenderer.render(StubResponseRenderer.java:56)
+	at com.github.tomakehurst.wiremock.http.AbstractRequestHandler.handle(AbstractRequestHandler.java:72)
+	at com.github.tomakehurst.wiremock.servlet.WireMockHandlerDispatchingServlet.service(WireMockHandlerDispatchingServlet.java:120)
+	at wiremock.javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at wiremock.org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:852)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at wiremock.org.eclipse.jetty.servlets.CrossOriginFilter.handle(CrossOriginFilter.java:310)
+	at wiremock.org.eclipse.jetty.servlets.CrossOriginFilter.doFilter(CrossOriginFilter.java:264)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1591)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:542)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at wiremock.org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1307)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:482)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at wiremock.org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1204)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at wiremock.org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:772)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at wiremock.org.eclipse.jetty.server.Server.handle(Server.java:494)
+	at wiremock.org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:374)
+	at wiremock.org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:268)
+	at wiremock.org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at wiremock.org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at wiremock.org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at wiremock.org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:367)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:782)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:918)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre>
+<hr><a href="http://eclipse.org/jetty">Powered by Jetty:// 9.4.20.v20190813</a><hr/>
+
+</body>
+</html>
+* Closing connection 0

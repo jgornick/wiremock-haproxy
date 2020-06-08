@@ -1,0 +1,369 @@
+wiremock-server_1  | 2020-06-04 14:33:45.737 Proxying: GET http://haproxy:3128/todos/1
+haproxy_1          | 000000a6:fe.accept(0006)=0012 from [::ffff:172.18.0.2:46514] ALPN=<none>
+haproxy_1          | 000000a6:fe.clireq[0012:ffffffff]: GET /todos/1 HTTP/1.1
+haproxy_1          | 000000a6:fe.clihdr[0012:ffffffff]: accept: */*
+haproxy_1          | 000000a6:fe.clihdr[0012:ffffffff]: user-agent: curl/7.54.0
+haproxy_1          | 000000a6:fe.clihdr[0012:ffffffff]: host: jsonplaceholder.typicode.com
+haproxy_1          | 000000a6:be.srvrep[0012:0014]: HTTP/1.1 200 OK
+haproxy_1          | 000000a6:be.srvhdr[0012:0014]: date: Thu, 04 Jun 2020 14:33:45 GMT
+haproxy_1          | 000000a6:be.srvhdr[0012:0014]: content-type: application/json; charset=utf-8
+haproxy_1          | 000000a6:be.srvhdr[0012:0014]: content-length: 83
+haproxy_1          | 000000a6:be.srvhdr[0012:0014]: set-cookie: __cfduid=debcc689c1b591246763ae0744634a78e1591281225; expires=Sat, 04-Jul-20 14:33:45 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax
+haproxy_1          | 000000a6:be.srvhdr[0012:0014]: x-powered-by: Express
+haproxy_1          | 000000a6:be.srvhdr[0012:0014]: vary: Origin, Accept-Encoding
+haproxy_1          | 000000a6:be.srvhdr[0012:0014]: access-control-allow-credentials: true
+haproxy_1          | 000000a6:be.srvhdr[0012:0014]: cache-control: max-age=43200
+haproxy_1          | 000000a6:be.srvhdr[0012:0014]: pragma: no-cache
+haproxy_1          | 000000a6:be.srvhdr[0012:0014]: expires: -1
+haproxy_1          | 000000a6:be.srvhdr[0012:0014]: x-content-type-options: nosniff
+haproxy_1          | 000000a6:be.srvhdr[0012:0014]: etag: W/"53-hfEnumeNh6YirfjyjaujcOPPT+s"
+haproxy_1          | 000000a6:be.srvhdr[0012:0014]: via: 1.1 vegur
+haproxy_1          | 000000a6:be.srvhdr[0012:0014]: cf-cache-status: HIT
+haproxy_1          | 000000a6:be.srvhdr[0012:0014]: age: 8164
+haproxy_1          | 000000a6:be.srvhdr[0012:0014]: accept-ranges: bytes
+haproxy_1          | 000000a6:be.srvhdr[0012:0014]: cf-request-id: 032159a8450000f24a01263200000001
+haproxy_1          | 000000a6:be.srvhdr[0012:0014]: expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+haproxy_1          | 000000a6:be.srvhdr[0012:0014]: server: cloudflare
+haproxy_1          | 000000a6:be.srvhdr[0012:0014]: cf-ray: 59e25eed3df3f24a-ORD
+haproxy_1          | 000000a6:be.srvcls[0012:0014]
+haproxy_1          | 000000a6:be.clicls[0012:0014]
+haproxy_1          | 000000a6:be.closed[0012:0014]
+haproxy_1          | <134>Jun  4 14:33:45 haproxy[7]: ::ffff:172.18.0.2:46514 [04/Jun/2020:14:33:45.741] fe be/clear 9/0/52/36/97 200 803 - - ---- 1/1/0/0/0 0/0 {104.31.91.239} "GET /todos/1 HTTP/1.1"
+haproxy_1          | 000000a7:fe.accept(0006)=0012 from [::ffff:172.18.0.2:46514] ALPN=<none>
+wiremock-server_1  | 2020-06-04 14:33:45.847 Request received:
+wiremock-server_1  | 172.18.0.1 - GET /todos/1
+wiremock-server_1  |
+wiremock-server_1  | Accept: [*/*]
+wiremock-server_1  | User-Agent: [curl/7.54.0]
+wiremock-server_1  | Host: [jsonplaceholder.typicode.com]
+wiremock-server_1  |
+wiremock-server_1  |
+wiremock-server_1  |
+wiremock-server_1  | Matched response definition:
+wiremock-server_1  | {
+wiremock-server_1  |   "status" : 200,
+wiremock-server_1  |   "proxyBaseUrl" : "http://haproxy:3128"
+wiremock-server_1  | }
+wiremock-server_1  |
+wiremock-server_1  | Response:
+wiremock-server_1  | HTTP/1.1 200
+wiremock-server_1  | date: [Thu, 04 Jun 2020 14:33:45 GMT]
+wiremock-server_1  | content-type: [application/json; charset=utf-8]
+wiremock-server_1  | set-cookie: [__cfduid=debcc689c1b591246763ae0744634a78e1591281225; expires=Sat, 04-Jul-20 14:33:45 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax]
+wiremock-server_1  | x-powered-by: [Express]
+wiremock-server_1  | vary: [Origin, Accept-Encoding]
+wiremock-server_1  | cache-control: [max-age=43200]
+wiremock-server_1  | pragma: [no-cache]
+wiremock-server_1  | expires: [-1]
+wiremock-server_1  | x-content-type-options: [nosniff]
+wiremock-server_1  | etag: [W/"53-hfEnumeNh6YirfjyjaujcOPPT+s"]
+wiremock-server_1  | via: [1.1 vegur]
+wiremock-server_1  | cf-cache-status: [HIT]
+wiremock-server_1  | age: [8164]
+wiremock-server_1  | accept-ranges: [bytes]
+wiremock-server_1  | cf-request-id: [032159a8450000f24a01263200000001]
+wiremock-server_1  | expect-ct: [max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"]
+wiremock-server_1  | server: [cloudflare]
+wiremock-server_1  | cf-ray: [59e25eed3df3f24a-ORD]
+wiremock-server_1  |
+wiremock-server_1  |
+wiremock-server_1  | 2020-06-04 14:33:46.890 Proxying: GET http://haproxy:3128/v1/public/coin/1
+haproxy_1          | 000000a7:fe.clireq[0012:ffffffff]: GET /v1/public/coin/1 HTTP/1.1
+haproxy_1          | 000000a7:fe.clihdr[0012:ffffffff]: accept: */*
+haproxy_1          | 000000a7:fe.clihdr[0012:ffffffff]: user-agent: curl/7.54.0
+haproxy_1          | 000000a7:fe.clihdr[0012:ffffffff]: host: api.coinranking.com
+haproxy_1          | fd[0014] OpenSSL error[0x1408f10b] ssl3_get_record: wrong version number
+haproxy_1          | fd[0014] OpenSSL error[0x140e0197] SSL_shutdown: shutdown while in init
+haproxy_1          | 000000a7:be.srvcls[0012:0014]
+haproxy_1          | 000000a7:be.clicls[0012:0014]
+haproxy_1          | 000000a7:be.closed[0012:0014]
+haproxy_1          | <134>Jun  4 14:33:46 haproxy[7]: ::ffff:172.18.0.2:46514 [04/Jun/2020:14:33:46.893] fe be/clear 33/0/0/-1/58 -1 0 - - SD-- 1/1/0/0/0 0/0 {13.249.135.21} "GET /v1/public/coin/1 HTTP/1.1"
+wiremock-server_1  | 2020-06-04 14:33:48.005 Proxying: GET http://haproxy:3128/v1/public/coin/1
+haproxy_1          | 000000a8:fe.accept(0006)=0012 from [::ffff:172.18.0.2:46526] ALPN=<none>
+haproxy_1          | 000000a8:fe.clireq[0012:ffffffff]: GET /v1/public/coin/1 HTTP/1.1
+haproxy_1          | 000000a8:fe.clihdr[0012:ffffffff]: accept: */*
+haproxy_1          | 000000a8:fe.clihdr[0012:ffffffff]: user-agent: curl/7.54.0
+haproxy_1          | 000000a8:fe.clihdr[0012:ffffffff]: host: api.coinranking.com
+haproxy_1          | 000000a8:be.srvrep[0012:0014]: HTTP/1.1 200 OK
+haproxy_1          | 000000a8:be.srvhdr[0012:0014]: content-type: application/json; charset=utf-8
+haproxy_1          | 000000a8:be.srvhdr[0012:0014]: content-length: 3388
+haproxy_1          | 000000a8:be.srvhdr[0012:0014]: access-control-allow-headers: DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,X-Access-Token
+haproxy_1          | 000000a8:be.srvhdr[0012:0014]: access-control-allow-methods: GET, POST, OPTIONS, PATCH, DELETE
+haproxy_1          | 000000a8:be.srvhdr[0012:0014]: access-control-allow-origin: *
+haproxy_1          | 000000a8:be.srvhdr[0012:0014]: cache-control: max-age=60
+haproxy_1          | 000000a8:be.srvhdr[0012:0014]: date: Thu, 04 Jun 2020 14:33:48 GMT
+haproxy_1          | 000000a8:be.srvhdr[0012:0014]: etag: W/"d3c-1PKl2yjbuFFcu9WpJWyJ59sZJjs"
+haproxy_1          | 000000a8:be.srvhdr[0012:0014]: x-rate-score: 4.159ms
+haproxy_1          | 000000a8:be.srvhdr[0012:0014]: vary: Accept-Encoding
+haproxy_1          | 000000a8:be.srvhdr[0012:0014]: x-cache: Miss from cloudfront
+haproxy_1          | 000000a8:be.srvhdr[0012:0014]: via: 1.1 9544538048b67636eed3ec04c11d909b.cloudfront.net (CloudFront)
+haproxy_1          | 000000a8:be.srvhdr[0012:0014]: x-amz-cf-pop: ORD51-C1
+haproxy_1          | 000000a8:be.srvhdr[0012:0014]: x-amz-cf-id: e4Q4MQs_4XWmYWjurpB8ZiNqzVsgh3NF-cMTjLZbK5CE1R7s7TR9EA==
+haproxy_1          | 000000a8:be.srvcls[0012:0014]
+haproxy_1          | 000000a8:be.clicls[0012:0014]
+haproxy_1          | 000000a8:be.closed[0012:0014]
+haproxy_1          | <134>Jun  4 14:33:48 haproxy[7]: ::ffff:172.18.0.2:46526 [04/Jun/2020:14:33:48.008] fe be/clear 9/0/378/168/555 200 4016 - - ---- 1/1/0/0/0 0/0 {13.249.135.21} "GET /v1/public/coin/1 HTTP/1.1"
+haproxy_1          | 000000a9:fe.accept(0006)=0012 from [::ffff:172.18.0.2:46526] ALPN=<none>
+wiremock-server_1  | 2020-06-04 14:33:48.565 Request received:
+wiremock-server_1  | 172.18.0.1 - GET /v1/public/coin/1
+wiremock-server_1  |
+wiremock-server_1  | Accept: [*/*]
+wiremock-server_1  | User-Agent: [curl/7.54.0]
+wiremock-server_1  | Host: [api.coinranking.com]
+wiremock-server_1  |
+wiremock-server_1  |
+wiremock-server_1  |
+wiremock-server_1  | Matched response definition:
+wiremock-server_1  | {
+wiremock-server_1  |   "status" : 200,
+wiremock-server_1  |   "proxyBaseUrl" : "http://haproxy:3128"
+wiremock-server_1  | }
+wiremock-server_1  |
+wiremock-server_1  | Response:
+wiremock-server_1  | HTTP/1.1 200
+wiremock-server_1  | content-type: [application/json; charset=utf-8]
+wiremock-server_1  | cache-control: [max-age=60]
+wiremock-server_1  | date: [Thu, 04 Jun 2020 14:33:48 GMT]
+wiremock-server_1  | etag: [W/"d3c-1PKl2yjbuFFcu9WpJWyJ59sZJjs"]
+wiremock-server_1  | x-rate-score: [4.159ms]
+wiremock-server_1  | vary: [Accept-Encoding]
+wiremock-server_1  | x-cache: [Miss from cloudfront]
+wiremock-server_1  | via: [1.1 9544538048b67636eed3ec04c11d909b.cloudfront.net (CloudFront)]
+wiremock-server_1  | x-amz-cf-pop: [ORD51-C1]
+wiremock-server_1  | x-amz-cf-id: [e4Q4MQs_4XWmYWjurpB8ZiNqzVsgh3NF-cMTjLZbK5CE1R7s7TR9EA==]
+wiremock-server_1  |
+wiremock-server_1  |
+wiremock-server_1  | 2020-06-04 14:33:49.604 Proxying: GET http://haproxy:3128/v1/public/coin/1
+haproxy_1          | 000000a9:fe.clireq[0012:ffffffff]: GET /v1/public/coin/1 HTTP/1.1
+haproxy_1          | 000000a9:fe.clihdr[0012:ffffffff]: accept: */*
+haproxy_1          | 000000a9:fe.clihdr[0012:ffffffff]: user-agent: curl/7.54.0
+haproxy_1          | 000000a9:fe.clihdr[0012:ffffffff]: host: api.coinranking.com
+haproxy_1          | 000000a9:be.srvrep[0012:0014]: HTTP/1.1 200 OK
+haproxy_1          | 000000a9:be.srvhdr[0012:0014]: content-type: application/json; charset=utf-8
+haproxy_1          | 000000a9:be.srvhdr[0012:0014]: content-length: 3388
+haproxy_1          | 000000a9:be.srvhdr[0012:0014]: access-control-allow-headers: DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,X-Access-Token
+haproxy_1          | 000000a9:be.srvhdr[0012:0014]: access-control-allow-methods: GET, POST, OPTIONS, PATCH, DELETE
+haproxy_1          | 000000a9:be.srvhdr[0012:0014]: access-control-allow-origin: *
+haproxy_1          | 000000a9:be.srvhdr[0012:0014]: cache-control: max-age=60
+haproxy_1          | 000000a9:be.srvhdr[0012:0014]: date: Thu, 04 Jun 2020 14:33:48 GMT
+haproxy_1          | 000000a9:be.srvhdr[0012:0014]: etag: W/"d3c-1PKl2yjbuFFcu9WpJWyJ59sZJjs"
+haproxy_1          | 000000a9:be.srvhdr[0012:0014]: x-rate-score: 4.159ms
+haproxy_1          | 000000a9:be.srvhdr[0012:0014]: vary: Accept-Encoding
+haproxy_1          | 000000a9:be.srvhdr[0012:0014]: x-cache: Hit from cloudfront
+haproxy_1          | 000000a9:be.srvhdr[0012:0014]: via: 1.1 9544538048b67636eed3ec04c11d909b.cloudfront.net (CloudFront)
+haproxy_1          | 000000a9:be.srvhdr[0012:0014]: x-amz-cf-pop: ORD51-C1
+haproxy_1          | 000000a9:be.srvhdr[0012:0014]: x-amz-cf-id: RI80s9h8xvODk-FXr5X2ITZxyYozmiou8m5dxlciX8T3HIW-E9Pw6Q==
+haproxy_1          | 000000a9:be.srvhdr[0012:0014]: age: 1
+haproxy_1          | 000000a9:be.srvcls[0012:0014]
+haproxy_1          | 000000a9:be.clicls[0012:0014]
+haproxy_1          | 000000a9:be.closed[0012:0014]
+haproxy_1          | <134>Jun  4 14:33:49 haproxy[7]: ::ffff:172.18.0.2:46526 [04/Jun/2020:14:33:49.607] fe be/clear 9/0/0/28/37 200 4019 - - ---- 1/1/0/0/0 0/0 {13.249.135.21} "GET /v1/public/coin/1 HTTP/1.1"
+haproxy_1          | 000000aa:fe.accept(0006)=0012 from [::ffff:172.18.0.2:46526] ALPN=<none>
+wiremock-server_1  | 2020-06-04 14:33:49.647 Request received:
+wiremock-server_1  | 172.18.0.1 - GET /v1/public/coin/1
+wiremock-server_1  |
+wiremock-server_1  | Accept: [*/*]
+wiremock-server_1  | User-Agent: [curl/7.54.0]
+wiremock-server_1  | Host: [api.coinranking.com]
+wiremock-server_1  |
+wiremock-server_1  |
+wiremock-server_1  |
+wiremock-server_1  | Matched response definition:
+wiremock-server_1  | {
+wiremock-server_1  |   "status" : 200,
+wiremock-server_1  |   "proxyBaseUrl" : "http://haproxy:3128"
+wiremock-server_1  | }
+wiremock-server_1  |
+wiremock-server_1  | Response:
+wiremock-server_1  | HTTP/1.1 200
+wiremock-server_1  | content-type: [application/json; charset=utf-8]
+wiremock-server_1  | cache-control: [max-age=60]
+wiremock-server_1  | date: [Thu, 04 Jun 2020 14:33:48 GMT]
+wiremock-server_1  | etag: [W/"d3c-1PKl2yjbuFFcu9WpJWyJ59sZJjs"]
+wiremock-server_1  | x-rate-score: [4.159ms]
+wiremock-server_1  | vary: [Accept-Encoding]
+wiremock-server_1  | x-cache: [Hit from cloudfront]
+wiremock-server_1  | via: [1.1 9544538048b67636eed3ec04c11d909b.cloudfront.net (CloudFront)]
+wiremock-server_1  | x-amz-cf-pop: [ORD51-C1]
+wiremock-server_1  | x-amz-cf-id: [RI80s9h8xvODk-FXr5X2ITZxyYozmiou8m5dxlciX8T3HIW-E9Pw6Q==]
+wiremock-server_1  | age: [1]
+wiremock-server_1  |
+wiremock-server_1  |
+wiremock-server_1  | 2020-06-04 14:33:50.689 Proxying: GET http://haproxy:3128/todos/1
+haproxy_1          | 000000aa:fe.clireq[0012:ffffffff]: GET /todos/1 HTTP/1.1
+haproxy_1          | 000000aa:fe.clihdr[0012:ffffffff]: accept: */*
+haproxy_1          | 000000aa:fe.clihdr[0012:ffffffff]: user-agent: curl/7.54.0
+haproxy_1          | 000000aa:fe.clihdr[0012:ffffffff]: host: jsonplaceholder.typicode.com
+haproxy_1          | 000000aa:be.srvcls[0012:0014]
+haproxy_1          | 000000aa:be.clicls[0012:0014]
+haproxy_1          | 000000aa:be.closed[0012:0014]
+haproxy_1          | <134>Jun  4 14:34:00 haproxy[7]: ::ffff:172.18.0.2:46526 [04/Jun/2020:14:33:50.692] fe be/clear 6/0/0/-1/10012 504 218 - - sH-- 1/1/0/0/0 0/0 {104.31.91.239} "GET /todos/1 HTTP/1.1"
+wiremock-server_1  | 2020-06-04 14:34:00.706 Request received:
+wiremock-server_1  | 172.18.0.1 - GET /todos/1
+wiremock-server_1  |
+wiremock-server_1  | Accept: [*/*]
+wiremock-server_1  | User-Agent: [curl/7.54.0]
+wiremock-server_1  | Host: [jsonplaceholder.typicode.com]
+wiremock-server_1  |
+wiremock-server_1  |
+wiremock-server_1  |
+wiremock-server_1  | Matched response definition:
+wiremock-server_1  | {
+wiremock-server_1  |   "status" : 200,
+wiremock-server_1  |   "proxyBaseUrl" : "http://haproxy:3128"
+wiremock-server_1  | }
+wiremock-server_1  |
+wiremock-server_1  | Response:
+wiremock-server_1  | HTTP/1.1 504
+wiremock-server_1  | cache-control: [no-cache]
+wiremock-server_1  | content-type: [text/html]
+wiremock-server_1  |
+wiremock-server_1  |
+wiremock-server_1  | 2020-06-04 14:34:01.741 Proxying: GET http://haproxy:3128/todos/1
+haproxy_1          | 000000ab:fe.accept(0006)=0012 from [::ffff:172.18.0.2:46542] ALPN=<none>
+haproxy_1          | 000000ab:fe.clireq[0012:ffffffff]: GET /todos/1 HTTP/1.1
+haproxy_1          | 000000ab:fe.clihdr[0012:ffffffff]: accept: */*
+haproxy_1          | 000000ab:fe.clihdr[0012:ffffffff]: user-agent: curl/7.54.0
+haproxy_1          | 000000ab:fe.clihdr[0012:ffffffff]: host: jsonplaceholder.typicode.com
+haproxy_1          | 000000ab:be.srvrep[0012:0014]: HTTP/1.1 200 OK
+haproxy_1          | 000000ab:be.srvhdr[0012:0014]: date: Thu, 04 Jun 2020 14:34:01 GMT
+haproxy_1          | 000000ab:be.srvhdr[0012:0014]: content-type: application/json; charset=utf-8
+haproxy_1          | 000000ab:be.srvhdr[0012:0014]: content-length: 83
+haproxy_1          | 000000ab:be.srvhdr[0012:0014]: set-cookie: __cfduid=df440c4705dd789346bd4acebe3af8a661591281241; expires=Sat, 04-Jul-20 14:34:01 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax
+haproxy_1          | 000000ab:be.srvhdr[0012:0014]: x-powered-by: Express
+haproxy_1          | 000000ab:be.srvhdr[0012:0014]: vary: Origin, Accept-Encoding
+haproxy_1          | 000000ab:be.srvhdr[0012:0014]: access-control-allow-credentials: true
+haproxy_1          | 000000ab:be.srvhdr[0012:0014]: cache-control: max-age=43200
+haproxy_1          | 000000ab:be.srvhdr[0012:0014]: pragma: no-cache
+haproxy_1          | 000000ab:be.srvhdr[0012:0014]: expires: -1
+haproxy_1          | 000000ab:be.srvhdr[0012:0014]: x-content-type-options: nosniff
+haproxy_1          | 000000ab:be.srvhdr[0012:0014]: etag: W/"53-hfEnumeNh6YirfjyjaujcOPPT+s"
+haproxy_1          | 000000ab:be.srvhdr[0012:0014]: via: 1.1 vegur
+haproxy_1          | 000000ab:be.srvhdr[0012:0014]: cf-cache-status: HIT
+haproxy_1          | 000000ab:be.srvhdr[0012:0014]: age: 8180
+haproxy_1          | 000000ab:be.srvhdr[0012:0014]: accept-ranges: bytes
+haproxy_1          | 000000ab:be.srvhdr[0012:0014]: cf-request-id: 032159e6db000058a406a3c200000001
+haproxy_1          | 000000ab:be.srvhdr[0012:0014]: expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+haproxy_1          | 000000ab:be.srvhdr[0012:0014]: server: cloudflare
+haproxy_1          | 000000ab:be.srvhdr[0012:0014]: cf-ray: 59e25f515d8958a4-ORD
+haproxy_1          | 000000ab:be.srvcls[0012:0014]
+haproxy_1          | 000000ab:be.clicls[0012:0014]
+haproxy_1          | 000000ab:be.closed[0012:0014]
+haproxy_1          | <134>Jun  4 14:34:01 haproxy[7]: ::ffff:172.18.0.2:46542 [04/Jun/2020:14:34:01.743] fe be/clear 6/0/60/51/117 200 803 - - ---- 1/1/0/0/0 0/0 {104.31.91.239} "GET /todos/1 HTTP/1.1"
+haproxy_1          | 000000ac:fe.accept(0006)=0012 from [::ffff:172.18.0.2:46542] ALPN=<none>
+wiremock-server_1  | 2020-06-04 14:34:01.862 Request received:
+wiremock-server_1  | 172.18.0.1 - GET /todos/1
+wiremock-server_1  |
+wiremock-server_1  | Accept: [*/*]
+wiremock-server_1  | User-Agent: [curl/7.54.0]
+wiremock-server_1  | Host: [jsonplaceholder.typicode.com]
+wiremock-server_1  |
+wiremock-server_1  |
+wiremock-server_1  |
+wiremock-server_1  | Matched response definition:
+wiremock-server_1  | {
+wiremock-server_1  |   "status" : 200,
+wiremock-server_1  |   "proxyBaseUrl" : "http://haproxy:3128"
+wiremock-server_1  | }
+wiremock-server_1  |
+wiremock-server_1  | Response:
+wiremock-server_1  | HTTP/1.1 200
+wiremock-server_1  | date: [Thu, 04 Jun 2020 14:34:01 GMT]
+wiremock-server_1  | content-type: [application/json; charset=utf-8]
+wiremock-server_1  | set-cookie: [__cfduid=df440c4705dd789346bd4acebe3af8a661591281241; expires=Sat, 04-Jul-20 14:34:01 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax]
+wiremock-server_1  | x-powered-by: [Express]
+wiremock-server_1  | vary: [Origin, Accept-Encoding]
+wiremock-server_1  | cache-control: [max-age=43200]
+wiremock-server_1  | pragma: [no-cache]
+wiremock-server_1  | expires: [-1]
+wiremock-server_1  | x-content-type-options: [nosniff]
+wiremock-server_1  | etag: [W/"53-hfEnumeNh6YirfjyjaujcOPPT+s"]
+wiremock-server_1  | via: [1.1 vegur]
+wiremock-server_1  | cf-cache-status: [HIT]
+wiremock-server_1  | age: [8180]
+wiremock-server_1  | accept-ranges: [bytes]
+wiremock-server_1  | cf-request-id: [032159e6db000058a406a3c200000001]
+wiremock-server_1  | expect-ct: [max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"]
+wiremock-server_1  | server: [cloudflare]
+wiremock-server_1  | cf-ray: [59e25f515d8958a4-ORD]
+wiremock-server_1  |
+wiremock-server_1  |
+wiremock-server_1  | 2020-06-04 14:34:02.903 Proxying: GET http://haproxy:3128/todos/1
+haproxy_1          | 000000ac:fe.clireq[0012:ffffffff]: GET /todos/1 HTTP/1.1
+haproxy_1          | 000000ac:fe.clihdr[0012:ffffffff]: accept: */*
+haproxy_1          | 000000ac:fe.clihdr[0012:ffffffff]: user-agent: curl/7.54.0
+haproxy_1          | 000000ac:fe.clihdr[0012:ffffffff]: host: jsonplaceholder.typicode.com
+haproxy_1          | 000000ac:be.srvrep[0012:0014]: HTTP/1.1 200 OK
+haproxy_1          | 000000ac:be.srvhdr[0012:0014]: date: Thu, 04 Jun 2020 14:34:02 GMT
+haproxy_1          | 000000ac:be.srvhdr[0012:0014]: content-type: application/json; charset=utf-8
+haproxy_1          | 000000ac:be.srvhdr[0012:0014]: content-length: 83
+haproxy_1          | 000000ac:be.srvhdr[0012:0014]: set-cookie: __cfduid=d095333266608e2d1829e53f892cbb1551591281242; expires=Sat, 04-Jul-20 14:34:02 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax
+haproxy_1          | 000000ac:be.srvhdr[0012:0014]: x-powered-by: Express
+haproxy_1          | 000000ac:be.srvhdr[0012:0014]: vary: Origin, Accept-Encoding
+haproxy_1          | 000000ac:be.srvhdr[0012:0014]: access-control-allow-credentials: true
+haproxy_1          | 000000ac:be.srvhdr[0012:0014]: cache-control: max-age=43200
+haproxy_1          | 000000ac:be.srvhdr[0012:0014]: pragma: no-cache
+haproxy_1          | 000000ac:be.srvhdr[0012:0014]: expires: -1
+haproxy_1          | 000000ac:be.srvhdr[0012:0014]: x-content-type-options: nosniff
+haproxy_1          | 000000ac:be.srvhdr[0012:0014]: etag: W/"53-hfEnumeNh6YirfjyjaujcOPPT+s"
+haproxy_1          | 000000ac:be.srvhdr[0012:0014]: via: 1.1 vegur
+haproxy_1          | 000000ac:be.srvhdr[0012:0014]: cf-cache-status: HIT
+haproxy_1          | 000000ac:be.srvhdr[0012:0014]: age: 8181
+haproxy_1          | 000000ac:be.srvhdr[0012:0014]: accept-ranges: bytes
+haproxy_1          | 000000ac:be.srvhdr[0012:0014]: cf-request-id: 032159eb21000058a406b26200000001
+haproxy_1          | 000000ac:be.srvhdr[0012:0014]: expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+haproxy_1          | 000000ac:be.srvhdr[0012:0014]: server: cloudflare
+haproxy_1          | 000000ac:be.srvhdr[0012:0014]: cf-ray: 59e25f583d9958a4-ORD
+haproxy_1          | 000000ac:be.srvcls[0012:0014]
+haproxy_1          | 000000ac:be.clicls[0012:0014]
+haproxy_1          | 000000ac:be.closed[0012:0014]
+haproxy_1          | <134>Jun  4 14:34:02 haproxy[7]: ::ffff:172.18.0.2:46542 [04/Jun/2020:14:34:02.906] fe be/clear 5/0/0/46/51 200 803 - - ---- 1/1/0/0/0 0/0 {104.31.91.239} "GET /todos/1 HTTP/1.1"
+haproxy_1          | 000000ad:fe.accept(0006)=0012 from [::ffff:172.18.0.2:46542] ALPN=<none>
+wiremock-server_1  | 2020-06-04 14:34:02.959 Request received:
+wiremock-server_1  | 172.18.0.1 - GET /todos/1
+wiremock-server_1  |
+wiremock-server_1  | Accept: [*/*]
+wiremock-server_1  | User-Agent: [curl/7.54.0]
+wiremock-server_1  | Host: [jsonplaceholder.typicode.com]
+wiremock-server_1  |
+wiremock-server_1  |
+wiremock-server_1  |
+wiremock-server_1  | Matched response definition:
+wiremock-server_1  | {
+wiremock-server_1  |   "status" : 200,
+wiremock-server_1  |   "proxyBaseUrl" : "http://haproxy:3128"
+wiremock-server_1  | }
+wiremock-server_1  |
+wiremock-server_1  | Response:
+wiremock-server_1  | HTTP/1.1 200
+wiremock-server_1  | date: [Thu, 04 Jun 2020 14:34:02 GMT]
+wiremock-server_1  | content-type: [application/json; charset=utf-8]
+wiremock-server_1  | set-cookie: [__cfduid=d095333266608e2d1829e53f892cbb1551591281242; expires=Sat, 04-Jul-20 14:34:02 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax]
+wiremock-server_1  | x-powered-by: [Express]
+wiremock-server_1  | vary: [Origin, Accept-Encoding]
+wiremock-server_1  | cache-control: [max-age=43200]
+wiremock-server_1  | pragma: [no-cache]
+wiremock-server_1  | expires: [-1]
+wiremock-server_1  | x-content-type-options: [nosniff]
+wiremock-server_1  | etag: [W/"53-hfEnumeNh6YirfjyjaujcOPPT+s"]
+wiremock-server_1  | via: [1.1 vegur]
+wiremock-server_1  | cf-cache-status: [HIT]
+wiremock-server_1  | age: [8181]
+wiremock-server_1  | accept-ranges: [bytes]
+wiremock-server_1  | cf-request-id: [032159eb21000058a406b26200000001]
+wiremock-server_1  | expect-ct: [max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"]
+wiremock-server_1  | server: [cloudflare]
+wiremock-server_1  | cf-ray: [59e25f583d9958a4-ORD]
+wiremock-server_1  |
+wiremock-server_1  |
+wiremock-server_1  | 2020-06-04 14:34:04.001 Proxying: GET http://haproxy:3128/v1/public/coin/1
+haproxy_1          | 000000ad:fe.clireq[0012:ffffffff]: GET /v1/public/coin/1 HTTP/1.1
+haproxy_1          | 000000ad:fe.clihdr[0012:ffffffff]: accept: */*
+haproxy_1          | 000000ad:fe.clihdr[0012:ffffffff]: user-agent: curl/7.54.0
+haproxy_1          | 000000ad:fe.clihdr[0012:ffffffff]: host: api.coinranking.com
+haproxy_1          | fd[0014] OpenSSL error[0x1408f10b] ssl3_get_record: wrong version number
+haproxy_1          | fd[0014] OpenSSL error[0x140e0197] SSL_shutdown: shutdown while in init
+haproxy_1          | 000000ad:be.srvcls[0012:0014]
+haproxy_1          | 000000ad:be.clicls[0012:0014]
+haproxy_1          | 000000ad:be.closed[0012:0014]
+haproxy_1          | <134>Jun  4 14:34:04 haproxy[7]: ::ffff:172.18.0.2:46542 [04/Jun/2020:14:34:04.004] fe be/clear 6/0/0/-1/29 -1 0 - - SD-- 1/1/0/0/0 0/0 {13.249.135.21} "GET /v1/public/coin/1 HTTP/1.1"
