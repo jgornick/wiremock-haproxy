@@ -13,7 +13,7 @@ COPY ./mappings mappings
 EXPOSE 9000
 
 ENTRYPOINT [\
-    "java", "-jar", "-XX:+UseContainerSupport", "/var/wiremock/lib/wiremock-jre8-standalone.jar", \
+    "java", "-jar", "-XX:+UseContainerSupport", "-Dhttp.keepAlive=false", "/var/wiremock/lib/wiremock-jre8-standalone.jar", \
     "--verbose", \
     "--preserve-host-header", \
     "--max-request-journal-entries", "1000", \
